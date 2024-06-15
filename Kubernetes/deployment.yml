@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: youtube-clone-app
-        image: ashfaque9x/youtube-clone:latest
+        image: ashishr99/youtube-clone:latest
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
