@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 sudo apt update -y
 
 ##Install Prometheus and Create Service for Prometheus
