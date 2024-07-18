@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/Ashfaque-9x/a-youtube-clone-app.git'
+                git branch: 'main', url: 'https://github.com/Ashish89Rangari/CICD_pipeline_project.git'
             }
         }
         stage("Sonarqube Analysis") {
