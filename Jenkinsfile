@@ -49,14 +49,14 @@ pipeline {
                    withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker'){   
                       sh "docker build -t youtube-clone ."
                       sh "docker tag youtube-clone ashfaque9x/youtube-clone:latest "
-                      sh "docker push ashfaque9x/youtube-clone:latest "
+                      sh "docker push ashishr99/youtube-clone:latest "
                     }
                 }
             }
         }
         stage("TRIVY Image Scan"){
             steps{
-                sh "trivy image ashfaque9x/youtube-clone:latest > trivyimage.txt" 
+                sh "trivy image ashishr99/youtube-clone:latest > trivyimage.txt" 
             }
         }
         stage('Deploy to Kubernets'){
@@ -80,7 +80,7 @@ pipeline {
             body: "Project: ${env.JOB_NAME}<br/>" +
                 "Build Number: ${env.BUILD_NUMBER}<br/>" +
                 "URL: ${env.BUILD_URL}<br/>",
-            to: 'ashfaque.s510@gmail.com',                              
+            to: 'jash4267@gmail.com',                              
             attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
     }
