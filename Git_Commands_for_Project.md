@@ -1,4 +1,4 @@
-# Set the Trigger and Verify the CI/CD Pipeline #
+# Set the Trigger and Verify the CI/CD Pipeline #  
 
 1) Necessary Git commands for project
 ```
